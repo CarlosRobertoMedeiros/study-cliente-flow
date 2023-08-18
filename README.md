@@ -7,8 +7,9 @@
 	- Carlos Roberto Medeiros de Lima
 	
 <p align="center">
-  <img src= "https://github.com/CarlosRobertoMedeiros/study-cliente-flow/blob/main/project-flow/SisCli-Flow.drawio.png" />
+  <img src= "https://github.com/CarlosRobertoMedeiros/study-cliente-flow/blob/main/project-flow/SisCli-Flow.drawio.png"/>
 </p>
+
 ## Docker Implementation
   Para carregar a estrutura, execute:
     sh start-constainer.sh
