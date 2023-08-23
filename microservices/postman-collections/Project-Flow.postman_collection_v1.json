@@ -1,0 +1,338 @@
+{
+	"info": {
+		"_postman_id": "eb4b12e8-709d-4935-903e-7ce1c2a7d298",
+		"name": "Project-Flow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "service--cliente",
+			"item": [
+				{
+					"name": "01-Inserir",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"carlosmedeiroslima@gmail.com\",\r\n    \"nome\": \"Carlos\",\r\n    \"sobrenome\": \"Lima\",\r\n    \"Endereco\": {\r\n        \"cep\": \"72000-000\",\r\n        \"logradouro\": \"Praça da Sé\",\r\n        \"complemento\": \"lado ímpar\",\r\n        \"bairro\": \"Sé\",\r\n        \"localidade\": \"São Paulo\",\r\n        \"uf\": \"SP\",\r\n        \"ibge\": \"3550308\",\r\n        \"gia\": \"1004\",\r\n        \"ddd\": \"11\",\r\n        \"siafi\": \"7107\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8021/service--cliente/cliente/inserir",
+							"host": [
+								"localhost"
+							],
+							"port": "8021",
+							"path": [
+								"service--cliente",
+								"cliente",
+								"inserir"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201-inserir",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{client_credentials_flow_token}}",
+										"type": "default"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"carlosmedeiroslima@gmail.com\",\r\n    \"nome\": \"Carlos\",\r\n    \"sobrenome\": \"Lima\",\r\n    \"datanascimento\": \"1981-12-12T17:09:42.411\",\r\n    \"Endereco\": {\r\n        \"cep\": \"72000-000\",\r\n        \"logradouro\": \"Praça da Sé\",\r\n        \"complemento\": \"lado ímpar\",\r\n        \"bairro\": \"Sé\",\r\n        \"localidade\": \"São Paulo\",\r\n        \"uf\": \"SP\",\r\n        \"ibge\": \"3550308\",\r\n        \"gia\": \"1004\",\r\n        \"ddd\": \"11\",\r\n        \"siafi\": \"7107\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8021/service--cliente/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8021",
+									"path": [
+										"service--cliente",
+										"add"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n\t\t\"id\": 1,\r\n\t\t\"email\": \"carlosmedeiroslima@gmail.com\",\r\n\t\t\"nome\": \"Carlos\",\r\n\t\t\"sobrenome\": \"Lima\",\r\n\t\t\"datanascimento\":\"1981-12-12T17:09:42.411\",\r\n\t\t\"datacadastro\":\"2023-08-01T12:02:03.305\",\r\n\t\t\"dataultimaatualizacao\":\"2023-08-01T12:02:03.305\",\r\n\t\t\"Endereco\": {\r\n\t\t\t\"cep\": \"72000-000\",\r\n\t\t\t\"logradouro\": \"Praça da Sé\",\r\n\t\t\t\"complemento\": \"lado ímpar\",\r\n\t\t\t\"bairro\": \"Sé\",\r\n\t\t\t\"localidade\": \"São Paulo\",\r\n\t\t\t\"uf\": \"SP\",\r\n\t\t\t\"ibge\": \"3550308\",\r\n\t\t\t\"gia\": \"1004\",\r\n\t\t\t\"ddd\": \"11\",\r\n\t\t\t\"siafi\": \"7107\"\r\n\t\t}\r\n\t}"
+						},
+						{
+							"name": "401-inserir",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{client_credentials_flow_token}}",
+										"type": "default"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"naoautenticado@gmail.com\",\r\n    \"nome\": \"naoautenticado\",\r\n    \"sobrenome\": \"Lima\",\r\n    \"datanascimento\": \"1983-07-03T08:26:42.411\",\r\n    \"Endereco\": {\r\n        \"cep\": \"72000-000\",\r\n        \"logradouro\": \"Praça Antônio Nunes\",\r\n        \"complemento\": \"lado Par\",\r\n        \"bairro\": \"Sé\",\r\n        \"localidade\": \"São Paulo\",\r\n        \"uf\": \"SP\",\r\n        \"ibge\": \"3550308\",\r\n        \"gia\": \"1004\",\r\n        \"ddd\": \"11\",\r\n        \"siafi\": \"7107\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8021/service--cliente/add?Content-Type=application/json",
+									"host": [
+										"localhost"
+									],
+									"port": "8021",
+									"path": [
+										"service--cliente",
+										"add"
+									],
+									"query": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n  \"status\":\"401\",\r\n  \"descricao\":\"Servico Não Autenticado - Favor solicitar autenticação para o serviço\"\r\n}"
+						},
+						{
+							"name": "403-inserir",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{client_credentials_flow_token}}",
+										"type": "default"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"naoautorizado@gmail.com\",\r\n    \"nome\": \"NaoAutorizado\",\r\n    \"sobrenome\": \"Lima\",\r\n    \"datanascimento\": \"1983-07-03T08:26:42.411\",\r\n    \"Endereco\": {\r\n        \"cep\": \"72000-000\",\r\n        \"logradouro\": \"Praça Antônio Nunes\",\r\n        \"complemento\": \"lado Par\",\r\n        \"bairro\": \"Sé\",\r\n        \"localidade\": \"São Paulo\",\r\n        \"uf\": \"SP\",\r\n        \"ibge\": \"3550308\",\r\n        \"gia\": \"1004\",\r\n        \"ddd\": \"11\",\r\n        \"siafi\": \"7107\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8021/service--cliente/add?Content-Type=application/json",
+									"host": [
+										"localhost"
+									],
+									"port": "8021",
+									"path": [
+										"service--cliente",
+										"add"
+									],
+									"query": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n  \"status\":\"403\",\r\n  \"descricao\":\"Servico Não Autorizado - Favor solicitar autorização para o serviço\"\r\n}"
+						},
+						{
+							"name": "503-inserir",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{client_credentials_flow_token}}",
+										"type": "default"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"indisponivel@gmail.com\",\r\n    \"nome\": \"indisponivel\",\r\n    \"sobrenome\": \"Lima\",\r\n    \"datanascimento\": \"1983-07-03T08:26:42.411\",\r\n    \"Endereco\": {\r\n        \"cep\": \"72000-000\",\r\n        \"logradouro\": \"Praça Antônio Nunes\",\r\n        \"complemento\": \"lado Par\",\r\n        \"bairro\": \"Sé\",\r\n        \"localidade\": \"São Paulo\",\r\n        \"uf\": \"SP\",\r\n        \"ibge\": \"3550308\",\r\n        \"gia\": \"1004\",\r\n        \"ddd\": \"11\",\r\n        \"siafi\": \"7107\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8021/service--cliente/add?Content-Type=application/json",
+									"host": [
+										"localhost"
+									],
+									"port": "8021",
+									"path": [
+										"service--cliente",
+										"add"
+									],
+									"query": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									]
+								}
+							},
+							"status": "Service Unavailable",
+							"code": 503,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n  \"status\":\"503\",\r\n  \"descricao\":\"Servico Indisponivel - Tente novamente mais tarde\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "02-ListarTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8021/service--cliente/cliente",
+							"host": [
+								"localhost"
+							],
+							"port": "8021",
+							"path": [
+								"service--cliente",
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-ListarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8021/service--cliente/cliente/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8021",
+							"path": [
+								"service--cliente",
+								"cliente",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04-AtualizarPorId",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8021/service--cliente/cliente/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8021",
+							"path": [
+								"service--cliente",
+								"cliente",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "05-ExcluirPorId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8021/service--cliente/cliente/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8021",
+							"path": [
+								"service--cliente",
+								"cliente",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
