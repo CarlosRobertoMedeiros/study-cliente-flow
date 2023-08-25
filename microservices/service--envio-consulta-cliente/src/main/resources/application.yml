@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: service--envio-consulta-cliente
+  profiles:
+    active: dev
+
+server:
+  port: 8011
+  servlet:
+    context-path: /service--envio-consulta-cliente
